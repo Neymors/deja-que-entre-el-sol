@@ -14,7 +14,7 @@ body {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     /* Fondo translúcido oscuro */
-    padding: 15px 0;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,9 +29,57 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     margin: 0 auto;
     padding: 0;
+}
+
+.menu-toggle {
+    display: none;
+    /* Botón oculto por defecto */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* Mostrar el botón en pantallas pequeñas */
+    }
+
+    #menu {
+        display: none;
+        /* Ocultar el menú por defecto */
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Fondo oscuro */
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        z-index: 9;
+        gap: 15px;
+    }
+
+    #menu.active {
+        display: flex;
+        /* Mostrar el menú desplegable */
+    }
+
+    .navbar ul a {
+        font-size: 1rem;
+        /* Reducir el tamaño de los enlaces en móviles */
+    }
 }
 
 .navbar a {
@@ -241,4 +289,91 @@ body {
     .profile-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Ajustes generales para moviles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar u {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    /*Ajuste de seccion Home*/
+    .section {
+        padding: 100px 20px;
+    }
+
+    .home-photo {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    /* Galeria de videos en una columna */
+    .video-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .video-item {
+        padding: 10px;
+    }
+
+    /*Perfiles en una columna*/
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .profile-item {
+        padding: 15px;
+    }
+
+    .profile-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-item h3 {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .profile-item p {
+        font-size: 0.9rem;
+    }
+
+    .profile-item a {
+        font-size: 0.8rem;
+    }
+
+    /*Footer*/
+    .footer {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+
+    .team-photo {
+        width: 90%;
+        /* Ocupa el ancho completo en pantallas pequeñas */
+        max-width: 600px;
+        /* Tamaño máximo en pantallas grandes */
+        height: auto;
+        /* Mantiene la proporción de la imagen */
+        margin: 20px auto;
+        /* Centra la imagen vertical y horizontalmente */
+        border-radius: 10px;
+        /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        /* Sombra elegante */
+    }
+
 }
