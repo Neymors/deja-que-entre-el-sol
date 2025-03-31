@@ -139,37 +139,41 @@ body {
         padding-top: 120px;
         /* Ajuste mayor en dispositivos más pequeños */
     }
-    .video-gallery (max-width: 768px;){
+
+    .video-gallery {
         grid-template-columns: 1fr;
         /* Una columna en móviles */
     }
 }
 
+
 /* Contenedor principal con scroll horizontal */
 .video-gallery {
-    display: flex; /* Cambia a flexbox para alineación horizontal */
-    gap: 20px; /* Espaciado entre videos */
+    display: flex;
+    /* Cambia a flexbox para alineación horizontal */
+    gap: 20px;
+    /* Espaciado entre videos */
     margin: 40px auto;
     padding: 0 20px;
-    overflow-x: auto; /* Habilita el desplazamiento horizontal */
-    scroll-behavior: smooth; /* Desplazamiento suave al hacer scroll */
+    overflow-x: auto;
+    /* Habilita el desplazamiento horizontal */
+    scroll-behavior: smooth;
+    /* Desplazamiento suave al hacer scroll */
 
-    scrollbar-width: none;  /* Estilo de scrollbar para Firefox */
+    scrollbar-width: none;
+    /* Estilo de scrollbar para Firefox */
 
 }
 
 /* Personalización de la barra de desplazamiento */
 .video-gallery::-webkit-scrollbar {
-    display: none; /* Oculta la barra de desplazamiento en navegadores WebKit */
-}
-
-.video-gallery::-webkit-scrollbar-thumb {
-    background-color: #888; /* Color de la barra */
-    border-radius: 10px; /* Bordes redondeados */
+    display: none;
+    /* Oculta la barra de desplazamiento en navegadores WebKit */
 }
 
 .video-gallery::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* Color en hover */
+    background-color: #555;
+    /* Color en hover */
 }
 
 /* Estilos para el contenedor individual del video */
@@ -180,8 +184,10 @@ body {
     border-radius: 20px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.05);
-    flex-shrink: 0; /* Asegura que los videos mantengan su tamaño */
-    min-width: 250px; /* Tamaño mínimo de cada video */
+    flex-shrink: 0;
+    /* Asegura que los videos mantengan su tamaño */
+    min-width: 250px;
+    /* Tamaño mínimo de cada video */
 }
 
 /* Estilo para las imágenes dentro de cada video */
@@ -199,7 +205,8 @@ body {
 }
 
 .video-item:hover img {
-    transform: scale(1.05); /* Zoom leve en hover */
+    transform: scale(1.05);
+    /* Zoom leve en hover */
 }
 
 /* Estilo para los enlaces de título de video */
