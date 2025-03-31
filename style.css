@@ -142,20 +142,7 @@ body {
 }
 
 /* Sección de videos */
-.video-item a {
-    color: white;
-    /* Cambia el color del enlace a blanco */
-    text-decoration: none;
-    /* Elimina el subrayado si no lo deseas */
-    transition: color 0.3s ease;
-    /* Suaviza el cambio de color en hover */
-}
-
-.video-item a:hover {
-    color: gray;
-    /* Cambia el color del enlace en hover, si quieres algo diferente */
-}
-
+/*Contenedor principal*/
 .video-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -163,27 +150,61 @@ body {
     margin: 40px auto;
     padding: 0 20px;
 }
-
-.video-item {
+/*Estilos para el contenedor individual de video*/
+.video-item{
     text-align: center;
     background-color: #1e1e1e;
     padding: 15px;
     border-radius: 20px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.05);
+    position: relative;
 }
-
+/*Estilo para la img dentro de cada video*/
 .video-item img {
     width: 100%;
     height: auto;
     border-radius: 20px;
+    transition: transform 0.3s ease;
 }
 
+/*Efecto hove para el contenedor y la img*/
 .video-item:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
     background-color: #2a2a2a;
 }
 
+.video-item:hover img {
+    transform: scale(1.05);
+    /* Pequeño efecto de zoom en hover */
+}
+/*Estilo para el título del video*/
+.video-item a{
+    color: inherit;
+    text-decoration: none;
+}
+.video-item a:hover {
+    color: gray;
+}
+
+/*   Estilos para enlaces específicos: .video-link y .video-text-link*/
+.video-link,
+.video-text-link {
+    display: inline-block;
+    width: 100%;
+}
+
+.video-text-link {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+.video-text-link:hover {
+    color: gray;
+}
 /* Perfiles */
 .profile-grid {
     display: grid;
