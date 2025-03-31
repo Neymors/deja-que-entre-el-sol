@@ -14,4 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // Navbar que desaparece al desplazarse
+    const navbar = document.querySelector(".navbar");
+    let lastScrollPosition = 0;
+
+    window.addEventListener("scroll", function () {
+        const currentScrollPosition = window.pageYOffset;
+
+        if (currentScrollPosition > lastScrollPosition) {
+            // Usuario se desplaza hacia abajo: ocultar navbar
+            navbar.classList.add("hidden");
+        } else {
+            // Usuario se desplaza hacia arriba: mostrar navbar
+            navbar.classList.remove("hidden");
+        }
+
+        lastScrollPosition = currentScrollPosition;
+    });
 });
