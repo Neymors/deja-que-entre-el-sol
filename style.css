@@ -319,6 +319,28 @@ body {
 .profile-item a:hover {
     color: #ddd;
 }
+.social-icons {
+    display: flex; /* Organiza los enlaces en una fila */
+    gap: 15px; /* Espaciado entre los íconos */
+    justify-content: center; /* Centra los íconos horizontalmente */
+    align-items: center; /* Centra los íconos verticalmente */
+}
+
+.social-icons a {
+    display: inline-block; /* Asegura que cada enlace sea un bloque alineado */
+    width: 24px; /* Tamaño uniforme de los íconos */
+    height: 24px;
+}
+
+.social-icons a svg {
+    width: 100%; /* Se ajusta al tamaño del contenedor del enlace */
+    height: 100%; /* Mantiene proporciones */
+    transition: transform 0.3s ease; /* Efecto suave para hover */
+}
+
+.social-icons a:hover svg {
+    transform: scale(1.2); /* Zoom al pasar el cursor */
+}
 
 /* Footer */
 .footer {
