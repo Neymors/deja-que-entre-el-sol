@@ -1,3 +1,26 @@
+// DARK MODE//
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    
+    // Comprobar si el usuario tiene un modo guardado
+    if (localStorage.getItem("dark-mode") === "enabled") {
+        document.body.classList.add("dark-mode");
+    }
+
+    // Alternar modo oscuro/claro al hacer clic en el botón
+    darkModeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        // Guardar la preferencia en localStorage
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("dark-mode", "enabled");
+        } else {
+            localStorage.setItem("dark-mode", "disabled");
+        }
+    });
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menuToggle");
     const menu = document.querySelector(".navbar ul"); // Selecciona el <ul> del menú
