@@ -82,7 +82,7 @@ async function cargarVideos() {
             }
             return video; // Si no hay fecha, dejarlo sin cambios
         }).filter(video => video.fecha) // Excluir los videos sin fecha
-          .sort((a, b) => b.fecha - a.fecha); // Ordenar por fecha más reciente primero
+            .sort((a, b) => b.fecha - a.fecha); // Ordenar por fecha más reciente primero
 
         videosOrdenados.forEach(video => {
             const videoElement = document.createElement("div");
@@ -106,3 +106,18 @@ async function cargarVideos() {
 
 // Cargar los videos cuando la página esté lista
 document.addEventListener("DOMContentLoaded", cargarVideos);
+// 💡 Verifica cada hora si ya pasó la 1:30 PM ARG para consultar la API automáticamente
+function iniciarConsultaDiaria() {
+    const ahora = new Date();
+    const horaActual = ahora.getHours();
+    const minutosActuales = ahora.getMinutes();
+    console.log(`Revisando... hora actual: ${horaActual}:${minutosActuales}`);
+    if (horaActual >= 13 && minutosActuales >= 10) {
+        cargarVideos(); // Llama a la API después de la 1:10 PM
+    } else {
+        console.log("Aún no es hora de consultar la API.");
+    }
+}
+
+// 🚀 Ejecuta la función cada hora
+setInterval(iniciarConsultaDiaria, 3600000);
