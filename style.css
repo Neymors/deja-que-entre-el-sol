@@ -4,17 +4,30 @@
 body {
   font-family: 'Montserrat', sans-serif;
   /* background-color: #121212; */
-  background: linear-gradient(180deg, #ff440084, #ffa60086, #ffd9008e, #87cfeb86);
-  color: black;
+  background: linear-gradient(180deg, #ff9a9e, #fad0c4, #fbc2eb);
+  color: #ffffff;
   margin: 0;
 }
 
 /* ===============================
-     MODO OSCURO
-     =============================== */
+       MODO OSCURO
+       =============================== */
 .dark-mode {
-  background: linear-gradient(180deg, #1a1a2e, #16213e, #0f3460, #071b3e);
-  color: white;
+  background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}
+
+.dark-mode::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/Estrellas.jpg') repeat;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .dark-mode-toggle {
@@ -29,14 +42,18 @@ body {
 }
 
 .dark-mode .dark-mode-toggle {
-  color: black;
+  color: rgb(255, 255, 255);
   /* Cambia el color del icono en modo oscuro */
   border-color: black;
 }
+.dark-mode-menu {
+  color: rgb(255, 255, 255); /* Si necesitas cambiar el color del texto */
+}
+
 
 /* ===============================
-     NAVBAR
-     =============================== */
+       NAVBAR
+       =============================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -70,7 +87,7 @@ body {
 }
 
 .navbar a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -78,14 +95,14 @@ body {
 }
 
 .navbar a:hover {
-  color: #d0da51;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+  color: rgb(212, 175, 55);
+  text-shadow: 0 0 5px rgba(212, 175, 55, 1);
   transform: scale(1.05);
 }
 
 /* ===============================
-     BOTONES DE NAVEGACIÓN
-     =============================== */
+       BOTONES DE NAVEGACIÓN
+       =============================== */
 .nav-buttons {
   display: flex;
   flex-direction: column;
@@ -105,35 +122,36 @@ body {
   background: none;
   border: none;
   outline: none;
-  color: white;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   font-size: 1.5rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ===============================
-     MENU
-     =============================== */
+       MENU
+       =============================== */
 .menu {
   display: flex;
   gap: 10px;
 }
 
-/* ===============================
-     LOGO
-     =============================== */
+
+/*============================
+       LOGO
+       =============================== */
 .logo img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 2px solid #ccc;
+  border: 2px solid  rgba(47, 0, 255, 0.295);
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* ===============================
-     SECCIONES Y HOME
-     =============================== */
+       SECCIONES Y HOME
+       =============================== */
 .section {
   padding: 125px 40px;
   text-align: center;
@@ -148,8 +166,8 @@ body {
 }
 
 /* ===============================
-     VIDEO GALLERY
-     =============================== */
+       VIDEO GALLERY
+       =============================== */
 .video-gallery {
   display: flex;
   gap: 20px;
@@ -169,13 +187,15 @@ body {
 .video-gallery::-webkit-scrollbar-thumb:hover {
   background-color: #e8e0e03a;
 }
+
 .video-gallery::-webkit-scrollbar-thumb {
   background-color: #e8e0e03a;
   border-radius: 10px;
 }
 
 .video-item {
-  width: fit-content; /* Se ajusta al tamaño del contenido */
+  width: fit-content;
+  /* Se ajusta al tamaño del contenido */
   text-align: center;
   background-color: #1e1e1e92;
   padding: 15px;
@@ -184,20 +204,26 @@ body {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -5px -5px 10px rgba(255, 255, 255, 0.05);
   flex-shrink: 0;
   min-width: 250px;
-  width: 336px; /* Ajuste exacto */
+  width: 336px;
+  /* Ajuste exacto */
 }
 
 .video-item img {
-  width: 336px; /* Ajuste exacto */
-  height: 180px; /* Ajuste exacto */
-  object-fit: cover; /* Mantiene proporciones y recorta si es necesario */
+  width: 336px;
+  /* Ajuste exacto */
+  height: 180px;
+  /* Ajuste exacto */
+  object-fit: cover;
+  /* Mantiene proporciones y recorta si es necesario */
   /*height: auto;*/
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
+
 .Videos img:hover {
   transform: scale(1);
 }
+
 .video-item:hover {
   transform: scale(1);
   background-color: #1e1e1e92;
@@ -208,14 +234,17 @@ body {
 }
 
 .video-item a {
-  color: rgb(255, 254, 254); /* Cambia el color del texto */
-  text-decoration: none; /* Evita subrayado automático */
+  color: rgb(255, 254, 254);
+  /* Cambia el color del texto */
+  text-decoration: none;
+  /* Evita subrayado automático */
   font-size: 1rem;
   margin: 8px 0 0;
 }
 
 .video-item a:hover {
-  color:grey; /* Cambia el color al pasar el mouse */
+  color: grey;
+  /* Cambia el color al pasar el mouse */
 }
 
 .video-link,
@@ -238,8 +267,8 @@ body {
 }
 
 /* ===============================
-     PERFIL
-     =============================== */
+       PERFIL
+       =============================== */
 .profile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -308,8 +337,8 @@ body {
 }
 
 /* ===============================
-     ICONOS SOCIALES
-     =============================== */
+       ICONOS SOCIALES
+       =============================== */
 .social-icons {
   display: flex;
   gap: 15px;
@@ -334,8 +363,8 @@ body {
 }
 
 /* ===============================
-     FOOTER
-     =============================== */
+       FOOTER
+       =============================== */
 .footer {
   text-align: center;
   padding: 20px;
@@ -356,8 +385,8 @@ body {
 }
 
 /* ===============================
-     MEDIA QUERIES
-     =============================== */
+       MEDIA QUERIES
+       =============================== */
 @media screen and (max-width: 768px) {
   .nav-buttons {
     top: 10px;
@@ -383,8 +412,11 @@ body {
   }
 
   .navbar ul a {
-    font-size: 1rem;
+    color: #fff;
+    font-size: 1rem;;
   }
+
+
 
   /* Mostrar botón de menú */
   .menu-toggle {
@@ -409,12 +441,13 @@ body {
   /* Menú desplegable */
   #menu {
     display: none;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(33, 31, 31, 0.5);
+    background-color: rgba(231, 233, 245, 0.589);
     position: absolute;
     top: 50px;
-    left: 0;
+    left: 20%;
     right: 0;
     padding: 10px;
     z-index: 9;
@@ -423,6 +456,7 @@ body {
 
   #menu.active {
     display: flex;
+    /* Ajusta según el contenido */
   }
 
   /* Ajustes en secciones */
@@ -483,3 +517,75 @@ body {
     height: 70px;
   }
 }
+
+/* Animaciones */
+.profile-item {
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+/* Scale */
+[data-animation="scale"]:hover {
+  transform: scale(1) rotate(1deg);
+  /* Combinación más interesante */
+  z-index: 2;
+  /* Para que superponga a otros elementos */
+}
+
+/* Rotate */
+[data-animation="rotate"]:hover {
+  transform: rotate(1deg) scale(1);
+}
+
+/* Fade */
+[data-animation="fade"]:hover {
+  opacity: 0.9;
+  transform: scale(0.98);
+  filter: saturate(1.2);
+}
+
+/* Efecto para todos los items */
+.profile-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor general */
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Imagen de Pergolini */
+.perfil-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(47, 0, 255, 0.295);
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+/* Información de Pergolini */
+.perfil-info {
+  flex: 1;
+  transition: filter 0.4s ease-in-out;
+}
+
+/* Efecto al hacer hover sobre la imagen */
+.perfil-img:hover {
+  transform: scale(1.5rem);
+}
+
+/* Blur en el resto del contenido cuando se agranda la imagen */
+.perfil-img:hover~.perfil-info {
+  filter: blur(50px);
+}
+
+

@@ -121,3 +121,15 @@ function iniciarConsultaDiaria() {
 
 // 🚀 Ejecuta la función cada hora
 setInterval(iniciarConsultaDiaria, 3600000);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const perfiles = document.querySelectorAll("[data-animation]"); // Selecciona elementos con el atributo data-animation
+    perfiles.forEach(perfil => {
+        const animacionDefinida = perfil.getAttribute("data-animation");
+        if (animacionDefinida) {
+            perfil.classList.add(animacionDefinida);
+        }
+    });
+});
+
+

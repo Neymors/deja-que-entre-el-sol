@@ -13,12 +13,12 @@
     <nav class="navbar">
         <div class="logo">
             <a href="https://www.instagram.com/dejaqueentreelsol/" target="_blank">
-                <img src="img/logo.jpg" alt="Logo DQES">
+                <img src="img/logo.jpg" alt="Logo DQES" data-animation="fade">
             </a>
         </div>
         <div class="nav-buttons">
-            <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
-            <button class="menu-toggle" id="menuToggle">☰</button>
+            <button id="darkModeToggle" class="dark-mode-toggle" data-animation="rotate">🌙</button>
+            <button class="menu-toggle" id="menuToggle" data-animation="fade">☰</button>
         </div>
         <ul id="menu" class="menu">
             <li><a href="#Home">Home</a></li>
@@ -34,11 +34,14 @@
         <h1>Deja que entre el sol ☀️</h1>
         <p> De Lunes a Viernes de 10 a 13Hs por VORTERIX</p>
         <p> Con Mario Pergolini Camila Fortunato Goncho Banzas Juan Tropeano</p>
-        <img src="img/Team.jpg" alt="Equipo completo" class="team-photo">
+        <img src="img/Team.jpg" alt="Equipo completo" class="team-photo" data-animation="fade">
     </section>
     <div id="video-list">
         <section id="Videos" class="section">
-            <h2>Videos</h2>
+            <div data-animation="fade">
+                <h2>Videos</h2>
+            </div>
+
             <div class="video-gallery">
                 <div class="video-item">
                     <a href="https://www.youtube.com/watch?v=cZ8C8SF0iUw" target="_blank">
@@ -53,16 +56,20 @@
     </div>
     <!-- Sección de Perfiles -->
     <section class="profile-grid">
-        <div id="Mario" class="profile-item">
-            <img src="img/Team/Pergolini.jpeg" alt="Mario Pergolini">
-            <h3>Mario Pergolini</h3>
+        <div id="Mario" class="profile-item" data-animation="scale">
+            <img src="img/Team/Pergolini.jpeg" alt="Mario Pergolini" class="perfil-img" id="perfil-img">
+            <strong>
+                <h3>Mario Pergolini</h3>
+            </strong>
+            <p>Mario Daniel Pergolini es un reconocido presentador y empresario argentino, famoso por su carisma y
+                visión innovadora.</p>
+            <p>Desde 2012, ha creado el juego del streming nunca uso bots,destacándose incluso en los primeros bloques
+                de Bitcoin en Argentina.</p>
+
             <p>
-                Mario Daniel Pergolini es un presentador y empresario argentino.
-                Se dice que el creador del juego, le regaló un robot a su madre ciega. Desde 2012, con 0 Bot.
-                Hace uno de los lemon Pai segun Narda Lepes
-                Mino unos de los primeros bloques de Bitcoin en argentina (Casciari se te escapo la tortuga).
+                <strong>NecroProde:</strong> 0 pts
             </p>
-            <p>NeoProde: 0 pts</p>
+
             <a href="https://instagram.com/mariopergolini" target="_blank" class="instagram-link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid"
                     viewBox="0 0 256 256">
@@ -73,15 +80,17 @@
             </a>
         </div>
 
-        <div id="Goncho" class="profile-item">
-            <img src="img/Team/goncho.jpg" alt="Goncho Banzas">
+        <div id="Goncho" class="profile-item" data-animation="rotate">
+            <img src="img/Team/goncho.jpg" alt="Goncho Banzas" class="perfil-img" id="perfil-img">
             <h3>Goncho Banzas</h3>
             <p>
                 A.K.A: El Niño Banzas. Dicen que la última herramienta que usó fue en un simulador.
-                Estrella de las redes sociales en Argentina, ganó fama por su canal de Twitch Goncho, donde se
-                hizo popular por sus partidas de Counter-Strike: Global Offensive.
+                Estrella de las redes sociales en Argentina.
+                Ganó fama por su canal de Twitch Goncho, donde se hizo popular por sus partidas de Counter-Strike:
+                Global Offensive.
             </p>
-            <p>NecoProde: 10 pts</p>
+            <p><strong>NeoProde:</strong> 10 pts</p>
+
             <div class="social-links">
                 <a href="https://instagram.com/gonchobanzas" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid"
@@ -102,14 +111,14 @@
 
         </div>
 
-        <div id="Cami" class="profile-item">
-            <img src="img/Team/Fortunato.jpeg" alt="Cami Fortunato">
+        <div id="Cami" class="profile-item" data-animation="scale">
+            <img src="img/Team/Fortunato.jpeg" alt="Cami Fortunato" class="perfil-img" id="perfil-img">
             <h3>Cami Fortunato</h3>
             <p>
                 Fotógrafa. Directora creativa. Princesa tiktoker. Señora mayor.
                 De la mesa la unica que tiene una familia y desendecia.
             </p>
-            <p>NecoProde: 0 pts</p>
+            <p><strong>NeoProde:</strong> 0 pts</p>
             <div class="social-links">
                 <a href="https://instagram.com/camilafortunatoph" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid"
@@ -134,14 +143,14 @@
             </div>
         </div>
 
-        <div id="Tropeano" class="profile-item">
-            <img src="./img/Team/Tropeano.jpg" alt="Juan Tropeano">
+        <div id="Tropeano" class="profile-item" data-animation="rotate">
+            <img src="./img/Team/Tropeano.jpg" alt="Juan Tropeano" class="perfil-img" id="perfil-img">
             <h3>Juan Tropeano</h3>
             <p>
                 Catarsis Xeneize. Fundador de la liga argentina de twitter. Estrella twittera.
                 Jugo a los simuladores pero la amiga de su hermana lo deschavo.
             </p>
-            <p>NecoProde: 0 pts</p>
+            <p><strong>NeoProde:</strong> 0 pts</p>
             <div class="social-links">
                 <a href="https://instagram.com/juantropeano/" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid"
@@ -160,15 +169,15 @@
             </div>
         </div>
         </div>
-        <div id="Rober" class="profile-item">
-            <img src="img/Team/Rober.jpeg" alt="El Momo">
+        <div id="Rober" class="profile-item" data-animation="scale">
+            <img src="img/Team/Rober.jpeg" alt="El Momo" class="perfil-img" id="perfil-img">
             <h3>Rober Galati</h3>
             <p>
                 El campeon del pueblo.
                 Hizo dupla humoristica con el gerente de programacion, llega cuando quiere.
                 Alergico al despertador a las 8:00 am.
             </p>
-            <p>NecoProde: 0 pts</p>
+            <p><strong>NeoProde:</strong> 0 pts</p>
             <div class="social-links">
                 <a href="https://instagram.com/robergalati/" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid"
@@ -187,14 +196,14 @@
                 </a>
             </div>
         </div>
-        <div id="Momo" class="profile-item">
-            <img src="img/Team/El Momo.jpg" alt="El Momo">
+        <div id="Momo" class="profile-item" data-animation="rotate">
+            <img src="img/Team/El Momo.jpg" alt="El Momo" class="perfil-img" id="perfil-img">
             <h3>Geronimo "El Momo" Benabides </h3>
             <p>
                 Semental Italiano, boxeador, historiador, pero es uno de los pocos stremers que tiene un titulo.
                 Favorito de Pergolini, Unico en tener una cortina propia.
             </p>
-            <p>NecoProde 0 pts</p>
+            <p><strong>NeoProde:</strong> 0 pts</p>
             <div class="social-links">
                 <a href="https://instagram.com/gero.momo/" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid"
