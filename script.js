@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const API_KEY = "AIzaSyDGNMP7KXJ7AhZ9d0UvbEMotcwwGph_ERU"; // Reemplaza con tu clave de API
+const API_KEY = "AIzaSyDvoYWafx20UE1B0q3Y0ZK7VjEnu-xsZ5k"; // Reemplaza con tu clave de API
 const CHANNEL_ID = "UCvCTWHCbBC0b9UIeLeNs8ug"; // ID del canal de Vorterix
 const QUERY = "Dejaqueentreelsol"; // Palabra clave para filtrar videos
 
@@ -131,5 +131,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-
 
