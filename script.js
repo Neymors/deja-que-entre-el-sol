@@ -173,3 +173,4 @@ function actualizarValor(elemento, nuevoValor) {
   // Ejecutar la función cada segundo
   setInterval(actualizarCuentaRegresiva, 1000);
   
+  
