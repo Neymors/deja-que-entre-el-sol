@@ -7,7 +7,9 @@
     background: linear-gradient(180deg, #ff9a9e, #fad0c4, #fbc2eb);
     color: #ffffff;
     margin: 0;
+    transition: background-color 0.10s ease, #121212 0.5s ease;
   }
+
   
   /* ===============================
            MODO OSCURO
@@ -102,9 +104,9 @@
     transform: scale(1.05);
   }
   
-  /* ===============================
-           BOTONES DE NAVEGACIÓN
-           =============================== */
+/* ===============================
+  BOTONES DE NAVEGACIÓN
+=============================== */
   .nav-buttons {
     display: flex;
     flex-direction: column;
@@ -670,4 +672,26 @@
       font-size: 1rem;
     }
   }
+
+/* Animación para el body (efecto fade) */
+@keyframes fadeFlash {
+  0% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.6;
+    filter: brightness(1.2);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+
+body.dark-mode-animating {
+  animation: fadeFlash 0.7s ease;
+}
+
+
 

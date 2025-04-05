@@ -136,41 +136,40 @@ document.addEventListener("DOMContentLoaded", () => {
 function actualizarValor(elemento, nuevoValor) {
     // Solo actualizar y animar si el valor es diferente
     if (elemento.textContent !== nuevoValor.toString()) {
-      elemento.textContent = nuevoValor;
-      // Reiniciar la animación eliminando y volviendo a añadir la clase
-      elemento.classList.remove('flip');
-      // Forzar reflow para reiniciar la animación
-      void elemento.offsetWidth;
-      elemento.classList.add('flip');
+        elemento.textContent = nuevoValor;
+        // Reiniciar la animación eliminando y volviendo a añadir la clase
+        elemento.classList.remove('flip');
+        // Forzar reflow para reiniciar la animación
+        void elemento.offsetWidth;
+        elemento.classList.add('flip');
     }
-  }
-  
-  function actualizarCuentaRegresiva() {
+}
+
+function actualizarCuentaRegresiva() {
     const ahora = new Date();
-    const objetivo = new Date();
-    
-    // Ajustar la hora objetivo: 10 AM Buenos Aires (UTC-3)
-    objetivo.setUTCHours(13, 0, 0, 0); // UTC-3 → UTC 13:00
-  
-    let diferencia = objetivo - ahora;
-  
-    if (diferencia < 0) {
-      // Si ya pasó la hora objetivo, calcular el tiempo para el próximo día
-      objetivo.setUTCDate(objetivo.getUTCDate() + 1);
-      diferencia = objetivo - ahora;
+    let objetivo = new Date(ahora);
+    // Establece la hora objetivo: 10 AM Buenos Aires (UTC-3 → 13:00 UTC)
+    objetivo.setUTCHours(13, 0, 0, 0);
+
+    // Si la cuenta regresiva ya pasó o el día es sábado (6) o domingo (0),
+    // se avanza al siguiente día laborable
+    while (objetivo - ahora <= 0 || objetivo.getDay() === 0 || objetivo.getDay() === 6) {
+        objetivo.setUTCDate(objetivo.getUTCDate() + 1);
+        objetivo.setUTCHours(13, 0, 0, 0);
     }
-  
+
+    const diferencia = objetivo - ahora;
     const horasRestantes = Math.floor(diferencia / (1000 * 60 * 60));
     const minutosRestantes = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
     const segundosRestantes = Math.floor((diferencia % (1000 * 60)) / 1000);
-  
+
     // Actualizar cada elemento solo si cambia
     actualizarValor(document.getElementById('horas'), horasRestantes);
     actualizarValor(document.getElementById('minutos'), minutosRestantes);
     actualizarValor(document.getElementById('segundos'), segundosRestantes);
-  }
-  
-  // Ejecutar la función cada segundo
-  setInterval(actualizarCuentaRegresiva, 1000);
-  
-  
+}
+
+// Ejecutar la función cada segundo
+setInterval(actualizarCuentaRegresiva, 1000);
+
+//Mini animacion 
