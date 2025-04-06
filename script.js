@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const API_KEY = "AIzaSyDvoYWafx20UE1B0q3Y0ZK7VjEnu-xsZ5k"; // Reemplaza con tu clave de API
+const API_KEY = "AIzaSyDGNMP7KXJ7AhZ9d0UvbEMotcwwGph_ERU"; // Reemplaza con tu clave de API
 const CHANNEL_ID = "UCvCTWHCbBC0b9UIeLeNs8ug"; // ID del canal de Vorterix
 const QUERY = "Dejaqueentreelsol"; // Palabra clave para filtrar videos
 
@@ -172,4 +172,22 @@ function actualizarCuentaRegresiva() {
 // Ejecutar la función cada segundo
 setInterval(actualizarCuentaRegresiva, 1000);
 
-//Mini animacion 
+//CARUSEL
+const carrusel = document.querySelector(".carrusel");
+const imagenes = carrusel.querySelectorAll("img");
+
+let index = 0;
+
+carrusel.addEventListener("mouseenter", () => {
+    const cambioImagen = setInterval(() => {
+        index = (index + 1) % imagenes.length;
+        carrusel.scrollTo({
+            left: imagenes[index].offsetLeft,
+            behavior: "smooth"
+        });
+    }, 10000); // Cambia cada segundo
+
+    carrusel.addEventListener("mouseleave", () => {
+        clearInterval(cambioImagen); // Detiene el movimiento cuando el usuario sale
+    });
+});
