@@ -17,14 +17,14 @@ Un espacio donde la creatividad y el humor se encuentran con la innovación tecn
 - ✅ Animaciones CSS personalizadas
 - ✅ Optimizado para SEO
 
-## 👥 Equipo Destacado
+## 👥 Equipo 
 | [<img src="img/Team/Pergolini.jpeg" width=100><br>Mario Pergolini](https://instagram.com/mpergoliniok) | [<img src="img/Team/goncho.jpg" width=100><br>Goncho Banzas](https://instagram.com/gonchobanzas) | [<img src="img/Team/Fortunato.jpeg" width=100><br>Cami Fortunato](https://instagram.com/camilafortunatoph) |
 |:-----------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------:|
-| *Leyenda multimedia*                                                                                  | *Experto en gaming*                                                                             | *Directora creativa*                                                                                     |
+| *Conductor Estrella*                                                                                  | *Experto en gaming*                                                                             | *Reina De Tiktok*                                                                                     |
 
 | [<img src="img/Team/Tropeanoo.jpeg" width=100><br>Juan Tropeano](https://instagram.com/juantropeano) | [<img src="img/Team/Rober.jpeg" width=100><br>Rober Galati](https://instagram.com/robergalati) | [<img src="img/Team/El Momo.jpg" width=100><br>Gerónimo Benabides](https://instagram.com/gero.momo) |
 |:---------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------:|
-| *Gurú de redes*                                                                                     | *Especialista en humor*                                                                        | *Boxeador digital*                                                                                 |
+| *Gurú de redes*                                                                                     | *Especialista en humor*                                                                        | *Boxeador, Sabe todo*                                                                                 |
 
 ## 🛠 Tecnologías Utilizadas
 - ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white)
