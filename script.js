@@ -25,7 +25,7 @@ function actualizarValor(elemento, nuevoValor) {
 }
 
 
-const API_KEY = "AIzaSyDvoYWafx20UE1B0q3Y0ZK7VjEnu-xsZ5k"; // Reemplaza con tu clave de API
+const API_KEY = "AIzaSyDYXm_dC7iYFf6qjnhGO9GQrtgLuFSREAU"; // Reemplaza con tu clave de API
 const CHANNEL_ID = "UCvCTWHCbBC0b9UIeLeNs8ug"; // ID del canal de Vorterix
 const QUERY = "Dejaqueentreelsol"; // Palabra clave para filtrar videos
 
