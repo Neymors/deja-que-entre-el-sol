@@ -326,8 +326,7 @@ body:not(.dark-mode) .dark-mode-toggle:hover {
 
 /*.dark-mode #countdown-container {
   background-color: rgba(255, 255, 255, 0.1);
-}
-*/
+}*/
 
 #countdown-container h2 {
   display: flex;
@@ -548,6 +547,11 @@ body:not(.dark-mode) .dark-mode-toggle:hover {
   margin-top: auto;
   /* Empuja hacia abajo */
   padding-top: 10px;
+}
+
+.social-icons a+a::before{
+  content:none;
+  display:none;
 }
 
 .social-icons a {
