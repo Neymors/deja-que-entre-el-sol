@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"
-  publish = "/build" # Asegurate de que esta sea tu carpeta de salida real
+  command = ""
+  publish = "."
 
 [functions]
   directory = "netlify/functions"
@@ -8,4 +8,9 @@
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200
