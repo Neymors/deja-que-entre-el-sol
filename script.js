@@ -5,8 +5,6 @@
 /**
  * Actualiza el contenido de un elemento HTML con un nuevo valor,
  * aplicando una animación 'flip' solo si el valor cambia.
- * @param {HTMLElement} elemento - El elemento HTML a actualizar.
- * @param {string|number} nuevoValor - El nuevo valor para el elemento.
  */
 function actualizarValor(elemento, nuevoValor) {
   if (!elemento) return;
@@ -22,16 +20,21 @@ function actualizarValor(elemento, nuevoValor) {
 }
 
 // ===============================
-//      YOUTUBE VIDEOS
+//      YOUTUBE VIDEOS (CORREGIDO)
 // ===============================
 
 async function cargarVideos() {
   try {
-    const response = await fetch("/.netlify/functions/youtube-proxy");
-    //const response = await fetch("/api/youtube-proxy");
+    // Usa esta línea (recomendada):
+    const response = await fetch("/api/youtube-proxy");
+    
+    // Alternativa si prefieres la ruta directa:
+    // const response = await fetch("/.netlify/functions/youtube-proxy");
+
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+      throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
     }
+
     const data = await response.json();
 
     const videoContainer = document.querySelector(".video-gallery");
@@ -66,11 +69,16 @@ async function cargarVideos() {
       `;
       videoContainer.appendChild(videoElement);
     });
+
   } catch (error) {
     console.error("Error cargando videos:", error);
+    
     const videoContainer = document.querySelector(".video-gallery");
     if (videoContainer) {
-      videoContainer.innerHTML = "<p>Error al cargar los videos. Intenta más tarde.</p>";
+      videoContainer.innerHTML = `
+        <p style="color: #ff6b6b; grid-column: 1 / -1; text-align: center;">
+          Error al cargar los videos. Intenta más tarde.
+        </p>`;
     }
   }
 }
@@ -261,12 +269,12 @@ document.addEventListener("DOMContentLoaded", () => {
   cargarVideos();         // Carga inicial de YouTube
   ordenarTablaNecroprode();
 
-  // Consulta automática cada hora después de la 1:10 PM (opcional)
+  // Consulta automática cada hora después de la 1:10 PM
   function consultarSiEsHora() {
     const ahora = new Date();
     if (ahora.getHours() >= 13 && ahora.getMinutes() >= 10) {
       cargarVideos();
     }
   }
-  setInterval(consultarSiEsHora, 3600000);
+  setInterval(consultarSiEsHora, 3600000); // cada hora
 });
