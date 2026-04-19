@@ -28,7 +28,6 @@ function actualizarValor(elemento, nuevoValor) {
 async function cargarVideos() {
   try {
     const response = await fetch("/.netlify/functions/youtube-proxy");
-    //const response = await fetch("/api/youtube-proxy");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -39,27 +38,26 @@ async function cargarVideos() {
 
     videoContainer.innerHTML = "";
 
-    // Filtrar y ordenar por fecha dentro del título (DD/MM)
+    // Aplicando los cambios solicitados en el mapeo y filtrado
     const videosOrdenados = data.items
       .map(video => {
-        const titulo = video.snippet.title;
-        const fechaMatch = titulo.match(/(\d{2})\/(\d{2})/);
-        if (fechaMatch) {
-          return {
-            ...video,
-            fecha: new Date(2025, parseInt(fechaMatch[2]) - 1, parseInt(fechaMatch[1]))
-          };
-        }
-        return null;
+        // CAMBIO 1: Usar la fecha real de publicación del video
+        return {
+          ...video,
+          fecha: new Date(video.snippet.publishedAt)
+        };
       })
-      .filter(video => video && video.fecha)
+      // CAMBIO 2: Filtrar directamente por la propiedad fecha
+      .filter(video => video.fecha)
       .sort((a, b) => b.fecha - a.fecha);
 
     videosOrdenados.forEach(video => {
       const videoElement = document.createElement("div");
       videoElement.classList.add("video-item");
+      
+      // CAMBIO 3: Estructura del link del video actualizada
       videoElement.innerHTML = `
-        <a href="https://www.youtube.com/watch?v=${video.id.videoId}" target="_blank">
+          <a href="https://www.youtube.com/watch?v=${video.snippet.resourceId.videoId}" target="_blank">
           <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.title}">
           <p>${video.snippet.title}</p>
         </a>
