@@ -1,6 +1,9 @@
 [build]
-  publish = "."
-  functions = "netlify/functions"
+  command = "npm run build"
+  publish = "/build" # Asegurate de que esta sea tu carpeta de salida real
+
+[functions]
+  directory = "netlify/functions"
 
 [[redirects]]
   from = "/api/*"

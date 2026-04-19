@@ -19,7 +19,7 @@ function actualizarValor(elemento, nuevoValor) {
     void elemento.offsetWidth; // Forzar reflow
     elemento.classList.add('flip');
   }
-}1
+}
 
 // ===============================
 //      YOUTUBE VIDEOS
