@@ -1,6 +1,7 @@
 # 🎥 Deja Que Entre el Sol
 
 [![GitHub License](https://img.shields.io/github/license/Neymors/deja-que-entre-el-sol)](https://github.com/Neymors/deja-que-entre-el-sol/blob/main/LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/🌐-GitHub%20Pages-brightgreen)](https://neymors.github.io/deja-que-entre-el-sol)
 
 **Sitio NO oficial del equipo de streaming y contenido multimedia**  
 Un espacio donde la creatividad y el humor se encuentran con la innovación tecnológica.
