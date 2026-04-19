@@ -19,7 +19,7 @@ function actualizarValor(elemento, nuevoValor) {
     void elemento.offsetWidth; // Forzar reflow
     elemento.classList.add('flip');
   }
-}
+}1
 
 // ===============================
 //      YOUTUBE VIDEOS
@@ -27,8 +27,8 @@ function actualizarValor(elemento, nuevoValor) {
 
 async function cargarVideos() {
   try {
-    //const response = await fetch("/.netlify/functions/youtube-proxy");
-    const response = await fetch("/api/youtube-proxy");
+    const response = await fetch("/.netlify/functions/youtube-proxy");
+    //const response = await fetch("/api/youtube-proxy");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
