@@ -1,6 +1,8 @@
 # 🎥 Deja Que Entre el Sol — Proyecto Finalizado
 
+<img width="1080" height="719" alt="image" src="https://github.com/user-attachments/assets/5247e3a9-79b4-4353-95e7-26f058a17ab3" />
 
+---
 
 [![Demo](https://img.shields.io/badge/🌐-Live%20Demo-brightgreen)](https://deja-que-entre-el-sol-vorterix.netlify.app/)
 [![GitHub License](https://img.shields.io/github/license/Neymors/deja-que-entre-el-sol)](https://github.com/Neymors/deja-que-entre-el-sol/blob/main/LICENSE)
@@ -46,6 +48,15 @@ El foco estuvo en:
 - 📊 **NecroProde** con lógica de ordenamiento por puntos  
 - 🌓 **Modo oscuro persistente** usando `localStorage`  
 - ⏱️ **Cuenta regresiva** para próximos eventos en vivo  
+
+---
+
+## mockap
+
+<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/a82851c0-3391-44f4-9b3a-7149aa1a706e" /> <img width="1024" height="683" alt="image" src="https://github.com/user-attachments/assets/db560f59-bccc-4114-8ead-5520c4c2b79d" /> <img width="1024" height="758" alt="image" src="https://github.com/user-attachments/assets/7ed1430d-9e8a-4912-9ab4-4feffafa9b38" />
+
+
+
 
 ---
 
